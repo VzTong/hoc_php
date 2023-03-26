@@ -47,12 +47,15 @@ include("../_header.php");
             <label class="box name">
                 <input class="box text gender" type="radio" name="gender" value="0" required />
                 Nam
-            </label>
 
-            <label class="box name">
                 <input class="box text gender" type="radio" name="gender" value="1" required />
                 Nữ
-            </label> </br>
+            </label>
+
+            <!-- <label class="box name">
+                <input class="box text gender" type="radio" name="gender" value="1" required />
+                Nữ
+            </label> </br> -->
 
             <label class="box name">Address:</label>
             <input class="box text" type="text" name="address" required /></br>

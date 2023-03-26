@@ -26,6 +26,7 @@ left join study_php.classes cls on st.class_id = cls.id;"); //db students
 	<div class="container">
 		<div class="mb-3">
 			<a href="admin/class/create.php" class="btn btn-a">Thêm mới lớp</a>
+			<a href="register.php" class="btn btn-a">Đăng ký tài khoản</a>
 		</div>
 
 		<table>
@@ -140,6 +141,6 @@ KEY_WORLD;
 </html>
 
 <!--
-	phía sau dấu ? là khai báo tên của biên
+	phía sau dấu ? là khai báo tên của biến
 	?? $id lấy địa chỉ của biến
  -->

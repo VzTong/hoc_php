@@ -33,7 +33,7 @@ if (is_method_get()) {
 
     $params = [$fullname, $dob, $gender, $address, $class_id, $img_path, $id];
     db_execute($sql, $params);
-    js_alert("Cập nhật thành công");
+    // js_alert("Cập nhật thành công");
     js_redirect_to("/"); //Chuyển hướng về trang chủ
 }
 
@@ -45,6 +45,12 @@ include("../_header.php");
 <div class="box">
     <div class="box box-a">
         <form method="post" enctype="multipart/form-data" autocomplete="off">
+
+            <?php
+            if (!empty($data["img_path"])) { ?>
+                <img src="<?php upload($data["img_path"]); ?>" alt="" width="100">
+                <br />
+            <?php } ?>
             <label class="box name">Full name:</label>
             <input class="box text" type="text" name="fullname" required value="<?php echo $data["fullname"]; ?>" /></br>
 
@@ -70,12 +76,13 @@ include("../_header.php");
             <select name="class_id" class="box text">
                 <?php
                 gen_option_ele("classes", "id", "class_name", $data["class_id"]);
-
                 ?>
-            </select></br>
+            </select>
+            </br>
 
             <label class="box name">Chooses avatar:</label>
-            <input class="box text img" type="file" name="img_path" accept=".png, .jpg, .jpeg" /></br>
+            <input class="box text img" type="file" name="img_path" accept=".png, .jpg, .jpeg" />
+            </br>
 
             <input class="box btn" type="submit" value="Update Student" />
         </form>
