@@ -29,11 +29,23 @@ if (is_method_get()) {
 
     $img_path = upload_and_return_filename("img_path", "student/img"); // url --> img
 
-    $sql = "update students set fullname=?, dob=?, gender=?, address=?, class_id=?, img_path=?
+    if (!empty($img_path)) {
+        $sql = "update students set fullname=?, dob=?, gender=?, address=?, class_id=?, img_path=?
+        where id=?";
+
+        $params = [$fullname, $dob, $gender, $address, $class_id, $img_path, $id];
+        db_execute($sql, $params);
+        js_redirect_to("/"); //Chuyển hướng về trang chủ
+        die;
+    }
+
+    $sql1 = "update students set fullname=?, dob=?, gender=?, address=?, class_id=?
     where id=?";
 
-    $params = [$fullname, $dob, $gender, $address, $class_id, $img_path, $id];
-    db_execute($sql, $params);
+    $params1 = [$fullname, $dob, $gender, $address, $class_id, $id];
+    db_execute($sql1, $params1);
+
+
     // js_alert("Cập nhật thành công");
     js_redirect_to("/"); //Chuyển hướng về trang chủ
 }
