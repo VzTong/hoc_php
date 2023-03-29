@@ -1,6 +1,6 @@
 <?php
 include("../../include/common.php");
-
+check_login();
 
 if (is_method_post()) {
     //upload và nhận lại filename

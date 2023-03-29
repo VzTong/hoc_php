@@ -57,6 +57,12 @@ body {
     margin: 30px auto;
 }
 
+
+/* Login Logout Sign up */
+.mb {
+    float: right;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -152,6 +158,31 @@ th {
 .box.box-c {
     width: 1000px;
     height: 1500px;
+    margin: 50px 20px 20px 20px;
+
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(42, 58, 73, 0.63);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Đăng kí và đăng nhập */
+.box.box-d-up {
+    width: 800px;
+    height: 900px;
+    margin: 50px 20px 20px 20px;
+
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(42, 58, 73, 0.63);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box.box-d-in {
+    width: 800px;
+    height: 600px;
     margin: 50px 20px 20px 20px;
 
     display: inline-block;

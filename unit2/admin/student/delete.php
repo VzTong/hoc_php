@@ -1,5 +1,6 @@
 <?php
 include("../../include/common.php");
+check_login();
 
 $id = $_GET["id"] ?? -1;
 

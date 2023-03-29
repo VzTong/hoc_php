@@ -1,7 +1,22 @@
 <?php
 
 include("config.php");
+session_start();
 
+function check_login()
+{
+	if (!is_logged()) {
+		//Chưa đăng nhập quay về trang chủ
+		js_alert("Cần đăng nhập để sử dụng chức năng này!!!");
+		js_redirect_to("/");
+	}
+}
+
+function is_logged()
+{
+	//return true nếu đã đăng nhập(có thông tin session username)
+	return isset($_SESSION["username"]) && !empty($_SESSION["username"]);
+}
 /*
  * Hiển thị alert
  */

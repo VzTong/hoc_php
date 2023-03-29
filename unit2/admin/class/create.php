@@ -1,5 +1,6 @@
 <?php
 include("../../include/common.php");
+check_login();
 
 if (is_method_post()) {
     $name = $_POST["class_name"];

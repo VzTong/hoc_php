@@ -24,9 +24,20 @@ left join study_php.classes cls on st.class_id = cls.id;"); //db students
 
 <body>
 	<div class="container">
+		<div class="mb">
+			<?php if (is_logged()) { ?>
+
+				<a href="logout.php" class="btn btn-c">Đăng xuất</a>
+
+			<?php } else { ?>
+
+				<a href="login.php" class="btn btn-b">Đăng nhập</a>
+				<a href="register.php" class="btn btn-c">Đăng ký tài khoản</a>
+
+			<?php } ?>
+		</div>
 		<div class="mb-3">
 			<a href="admin/class/create.php" class="btn btn-a">Thêm mới lớp</a>
-			<a href="register.php" class="btn btn-a">Đăng ký tài khoản</a>
 		</div>
 
 		<table>
