@@ -43,6 +43,13 @@ col {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -53,11 +60,12 @@ col {
 table {
     width: 100%;
     border-collapse: collapse;
+    background-color: rgba(42, 58, 73, 0.63);
 }
 
 td,
 th {
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.372);
     padding: 5px;
 }
 
@@ -93,27 +101,63 @@ th {
     margin-bottom: 15px;
 }
 
+.text_title {
+    width: 500px;
+    height: 65px;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
 
 .box {
     max-width: 1500px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 20px 20px 20px 20px;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 0px 20px;
 
     border-radius: 21px;
     display: flex;
+    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
+/* Sửa sinh viên */
 .box.box-a {
-    width: 2000px;
-    height: 2000px;
-    margin: 20px 20px 20px 20px;
+    width: 1200px;
+    height: 1800px;
+    margin: 50px 20px 20px 20px;
 
-    border-radius: 21px;
     display: inline-block;
     justify-content: space-around;
     align-items: center;
+    background-color: rgba(42, 58, 73, 0.63);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Thêm vs sửa lớp */
+.box.box-b {
+    width: 700px;
+    height: 400px;
+    margin: 50px 20px 20px 20px;
+
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(42, 58, 73, 0.63);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Thêm sinh viên */
+.box.box-c {
+    width: 1000px;
+    height: 1500px;
+    margin: 50px 20px 20px 20px;
+
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(42, 58, 73, 0.63);
     box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -125,12 +169,21 @@ th {
     width: 380px;
     height: 65px;
     font-size: 40px;
+    color: black;
     margin: 5px auto;
 }
 
 .box.text.img {
+    margin: 5px auto;
     width: 500px;
-    height: 500px;
+    height: 120px;
+    color: black;
+}
+
+.box.img {
+    width: auto;
+    height: 300px;
+    margin-left: 0;
 }
 
 .box.text.gender {
@@ -146,4 +199,5 @@ th {
     color: rgb(248, 248, 248);
     border-color: blueviolet;
     cursor: pointer;
+    margin-top: 0px;
 }

@@ -21,15 +21,17 @@ if (is_method_get()) {
 }
 
 
-$_title = "Sửa lớp";
+$_title = "Edit class";
 include("../_header.php");
 ?>
 
 <div class="box">
-    <div class="box box-a">
+    <div class="box box-a" style="width: 700px; height:400px;">
+        <h2 class="text_title">Sửa lớp</h2>
+
         <form method="post" autocomplete="off">
             <label class="box name">Class_name: </label>
-            <input class="box text" type="text" name="class_name" required value="<?php echo $data["class_name"]; ?>" /><br>
+            <input class="box text" style="text-align: center;" type="text" name="class_name" required value="<?php echo $data["class_name"]; ?>" /><br>
             <input class="box btn" type="submit" value="Cập nhật lớp" />
         </form>
     </div>

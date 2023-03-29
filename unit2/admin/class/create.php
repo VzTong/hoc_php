@@ -10,16 +10,18 @@ if (is_method_post()) {
 
 }
 
-$_title = "Tạo mới lớp";
+$_title = "Create new class";
 include("../_header.php");
 
 ?>
 
 <div class="box">
-    <div class="box box-a">
+    <div class="box box-b">
+        <h2 class="text_title">Tạo mới lớp</h2>
+
         <form method="post" autocomplete="off">
             <label class="box name">Class name:</label>
-            <input class="box text" type="text" name="class_name" required /><br>
+            <input class="box text" style="text-align: center;" type="text" name="class_name" required /><br>
             <input class="box btn" type="submit" value="Thêm lớp" />
         </form>
     </div>

@@ -1,6 +1,7 @@
 <?php
 include("../../include/common.php");
 
+
 if (is_method_post()) {
     //upload và nhận lại filename
 
@@ -18,7 +19,7 @@ if (is_method_post()) {
 
     //dùng filename nhận được để lưu vào db
     $sql = "insert into students (fullname, dob, gender, address, class_id, img_path)
-            values(?,?,?,?,?,?)";
+    values(?,?,?,?,?,?)";
 
     // $insert_success = db_execute($sql, [$fullname, $dob, $gender, $address, $class_id, $img_path]);
 
@@ -26,30 +27,31 @@ if (is_method_post()) {
     db_execute($sql, $params);
 
     js_redirect_to("/"); // "/" => lấy file index.php
-
 }
 
-$_title = "Thêm học sinh";
+$_title = "Create a new student";
 include("../_header.php");
 
 ?>
 
 <div class="box">
-    <div class="box box-a">
+    <div class="box box-c">
+        <h2 class="text_title">Thêm sinh viên</h2>
+
         <form method="post" enctype="multipart/form-data" autocomplete="off">
             <label class="box name">Full name:</label>
             <input class="box text" type="text" name="fullname" required /></br>
 
             <label class="box name">Dob:</label>
-            <input class="box text" type="date" name="dob" required /></br>
+            <input class="box text" style="text-align: center;" type="date" name="dob" required /></br>
 
             <label class="box name">Gender:</label>
-            <label class="box name">
+            <label class="box text">
                 <input class="box text gender" type="radio" name="gender" value="0" required />
-                Nam
+                <span style="color:aliceblue;">Nam</span>
 
                 <input class="box text gender" type="radio" name="gender" value="1" required />
-                Nữ
+                <span style="color:aliceblue;">Nữ</span>
             </label>
 
             <!-- <label class="box name">
@@ -61,8 +63,8 @@ include("../_header.php");
             <input class="box text" type="text" name="address" required /></br>
 
             <label class="box name">Chooses classs:</label>
-            <select name="class_id" class="box text">
-                <option value="">-- Chooses classs --</option>
+            <select name="class_id" class="box text" style="text-align: center;">
+                <option class="box text" value="">-- Chooses classs --</option>
                 <?php
                 gen_option_ele("classes", "id", "class_name");
                 ?>

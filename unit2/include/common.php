@@ -246,11 +246,14 @@ function gen_option_ele($table, $col_value = "`id`", $col_text = "`name`", $sele
 	foreach ($data as $item) {
 		$text = htmlentities($item[$col_text]);
 		if ($item[$col_value] == $selected_value) {
-			$str .= "<option value='$item[$col_value]' selected>$text</option>";
+			$str .= "<option style='color: black;' value='$item[$col_value]' selected>$text</option>";
 		} else {
-			$str .= "<option value='$item[$col_value]'>$text</option>";
+			$str .= "<option style='color: black;' value='$item[$col_value]'>$text</option>";
 		}
 	}
+
+	// style='color: black;' để cho thẻ option có màu chữ là màu đen
+
 	echo $str;
 }
 

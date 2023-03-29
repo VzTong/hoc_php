@@ -69,8 +69,8 @@ function isUsernameExists(string $username): bool
 
 <body>
     <div class="box">
-        <div class="box box-a">
-            <h2>Đăng kí tài khoản</h2>
+        <div class="box box-a" style="width: 800px; height: 900px;">
+            <h2 class="text_title">Đăng kí tài khoản</h2>
 
             <form method="post">
                 <div>

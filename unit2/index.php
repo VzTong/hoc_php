@@ -65,7 +65,6 @@ KEY_WORLD;
 		</table>
 	</div>
 	<br />
-	<hr />
 	<br />
 
 
