@@ -6,7 +6,7 @@ $data = db_select("select *from classes"); //db classes
 
 $data2 = db_select("select st.*, cls.class_name from study_php.students st
 left join study_php.classes cls on st.class_id = cls.id;"); //db students
-
+//dòng lệnh left join__Fk___on___Điều Kiện____; ==> giúp lấy đc cả dữ liệu là null
 ?>
 
 <!DOCTYPE html>
@@ -116,6 +116,12 @@ KEY_WORLD;
 
 					$gender = $item2["gender"];
 
+					if($gender == 0){
+						$gender = "Nam";
+					}elseif($gender == 1){
+						$gender = "Nữ";
+					}
+
 					$address = $item2["address"];
 
 					$class_name = $item2["class_name"];
@@ -126,7 +132,7 @@ KEY_WORLD;
 						<tr>
 							<td>$id</td>
 							<td>$fullname</td>
-							<td><img src="$img" style="width: 200px; higth:200px"/></td>
+							<td><img src="$img" style="width: 200px; hight:200px"/></td>
 							<td>$dob</td>
 							<td>$gender</td>
 							<td>$address</td>

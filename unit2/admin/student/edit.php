@@ -92,7 +92,7 @@ include("../_header.php");
             <label class="box name">Address:</label>
             <input class="box text" type="text" name="address" required value="<?php echo $data["address"]; ?>" /></br>
 
-            <label class="box name">Chooses classs:</label>
+            <label class="box name">Chooses class:</label>
             <select name="class_id" class="box text" style="text-align: center;">
                 <?php
                 gen_option_ele("classes", "id", "class_name", $data["class_id"]);

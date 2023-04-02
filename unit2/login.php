@@ -23,7 +23,7 @@ if (is_method_post()) {
 
     $user = $user[0];
 
-    //4.Nếu kết quả select khác rỗng thì so sánh password trong db vs passwork ở bước 1
+    //4.Nếu kết quả select khác rỗng thì so sánh password trong db vs password ở bước 1
     // --> sử dụng password_verify()
     if (password_verify($password, $user["password"]) == true) {
         //xác thực thông tin đăng nhập thành công
