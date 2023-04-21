@@ -56,16 +56,16 @@ if (is_method_post()) {
         <div class="box box-d-in">
             <h2 class="text_title">Đăng Nhập tài khoản</h2>
 
-            <form method="post">
+            <form  enctype="multipart/form-data" method="post">
                 <div>
                     <label class="box name">Tên đăng nhập</label>
-                    <input class="box text" type="text" name="username" minlength="4" require maxlength="20" autocomplete="off" />
+                    <input class="box text" type="text" name="username" minlength="4" maxlength="20" autocomplete="off"  require/>
                 </div>
                 <br />
 
                 <div>
                     <labe class="box name">Mật khẩu</labe>
-                    <input class="box text" type="password" name="password" minlength="4" require autocomplete="off" />
+                    <input class="box text" type="password" name="password" minlength="4" autocomplete="off"  require/>
                 </div>
                 <br />
 
