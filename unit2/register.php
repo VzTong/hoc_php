@@ -80,7 +80,7 @@ function isUsernameExists(string $username): bool
                 <br />
 
                 <div>
-                    <labe class="box name">Mật khẩu</labe>
+                    <label class="box name">Mật khẩu</label>
                     <input class="box text" type="password" name="password" minlength="4" autocomplete="off" require />
                 </div>
                 <br />
